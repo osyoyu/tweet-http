@@ -16,6 +16,10 @@ configure do
   set :server, 'webrick'
 end
 
+get '/favicon.ico' do
+  halt
+end
+
 get '/:text' do
   client.update(params[:text])
 end
